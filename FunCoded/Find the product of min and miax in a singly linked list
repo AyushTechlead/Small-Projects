@@ -1,0 +1,25 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+ 
+void minmax(ListNode* head){
+	ListNode* t=head;
+	int min = t->val;
+	int max = t->val;
+	t=t->next;
+	while(t!=NULL){
+		if(t->val > max){
+			max = t->val;
+		}
+		if(t->val < min){
+			min = t->val;
+		}
+		t=t->next;
+	}
+	cout<<min*max;
+}

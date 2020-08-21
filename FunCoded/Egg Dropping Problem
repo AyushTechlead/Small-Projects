@@ -1,0 +1,26 @@
+//egg dropping problem
+//return the first floor the egg will break.
+
+#include<stdio.h>
+int findfloor(int* fData , int n);
+int main()
+{
+	int fData[]={1,0,0,0,0,0,0,0};
+	int n = sizeof(fData)/sizeof(fData[0]);
+	printf("First floor %d",findfloor(fData,n));
+	return 0;
+}
+int findfloor(int* fdata , int n){
+	int start = 0, end = n-1 ,mid = n/2;
+	while(start < end){
+		mid = (start+end)/2;
+		if((fdata[mid] == 1) && (fdata[mid+1] == 0))
+			return mid+1;
+		else if((fdata[mid] == 1)){
+			start = mid; 
+		}
+		else if((fdata[mid] == 0))
+			end = mid;
+	} 
+	return -1;
+}

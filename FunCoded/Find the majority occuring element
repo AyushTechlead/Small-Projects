@@ -1,0 +1,24 @@
+//solution 1
+int majorityElement(int* nums, int n){
+   int curr = nums[0],count = 0;
+    for(int i = 0;i<n;i++){
+        if(nums[i] == curr)
+            count++;
+        else
+            count--;
+        if(count == -1){
+            curr = nums[i];
+            count = 1;
+        }
+    }
+    return curr;
+}
+
+//methord 2
+int comp(const int *p,const int *q){
+    return (*(int*)p - *(int*)q);
+}
+int majorityElement(int* nums, int n){
+    qsort(nums,n,sizeof(nums[0]),comp);
+    return nums[n/2];
+}

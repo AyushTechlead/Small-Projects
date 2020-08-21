@@ -1,0 +1,37 @@
+//C++ code
+#include <bits/stdc++.h>
+using namespace std;
+
+void print(int *Arr,int n){
+	for(int i=0;i<n;i++)
+		printf("%d ",Arr[i]);
+}
+int main(){
+	int Arr[] = {56,34,45,54,43,34,54,76,3,9642,56,98,56765};
+	int n = sizeof(Arr)/sizeof(Arr[0]);	
+	//inbuild qsort in C++
+	sort(Arr,Arr+n);
+	print(Arr,n);
+	return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------
+//C code
+#include <stdio.h>
+int comp(const void *a,const void *b){
+	return *(int*)a - *(int*)b;
+}
+
+void print(int *Arr,int n){
+	for(int i=0;i<n;i++)
+		printf("%d ",Arr[i]);
+}
+int main(){
+	int Arr[] = {56,34,45,54,43,34,54,76,3,9642,56,98,56765};
+	int n = sizeof(Arr)/sizeof(Arr[0]);	
+  //for C
+	qsort((void*)Arr,n,sizeof(Arr[0]),comp);
+  }
+print(Arr,n);
+return 0;
+}

@@ -1,0 +1,6 @@
+n = 21  //we want to find for 21 and factorail of 21! = 51090942171709440000                                                                                                                     
+ans = 0
+while n:
+    n = n//5
+    ans += n 
+print(ans)    //it will give ans = 4
