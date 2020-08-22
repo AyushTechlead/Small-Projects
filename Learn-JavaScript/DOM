@@ -1,0 +1,33 @@
+document.firstElementChild.lastElementChild.lastElementChild.lastElementChild;
+
+var xx = document.firstElementChild.lastElementChild.lastElementChild.lastElementChild;
+xx.style.color = "red";
+xx.innerHTML = "Ayush";   //also all tags inside the xx if exist
+xx.innerHTML = "<b>Ayush</b>";
+
+xx.textContent = "Ayush";
+
+document.querySelector('input').click();
+document.querySelector('#byId').click();
+document.querySelector('.class').click();
+document.querySelector('#select .class').click();
+
+var arr = document.getElementByTag('li')    //returns a array of all item which are in LI tag.
+arr[1].style.color = "red";
+
+arr.length
+
+var arr = document.getElementByClassName('li');
+
+var arr = document.getElementbyId('li');
+
+document.querySelector('li').classList;
+document.querySelector('li').classList.add("css-property");
+document.querySelector('li').classList.remove("css-property");
+document.querySelector('li').classList.toggle("css-property");
+
+
+document.querySelector("a").attributes;
+
+document.querySelector("a").getAttribute("href");
+document.querySelector("a").setAttribute("href","www.bing.com");   //change "google.com" to "bing.com"
